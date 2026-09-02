@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAIDEN MEI — SPEC.01 | A DIGITAL CHARACTER SHOWCASE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- LOADING -->
+<div id="loader">
+  <div class="loader-top">
+    <span class="mono">RAIDEN MEI — SPEC.01</span>
+    <span class="mono">EST. 2017 / ARCHIVE</span>
+  </div>
+  <div class="loader-center">
+    <div class="loader-title">RAIDEN MEI</div>
+    <div class="loader-sub">
+      <span id="loader-counter" class="mono">00 / 09</span>
+      <span class="mono">SYSTEM INITIALIZING...</span>
+    </div>
+    <div class="loader-progress-wrap">
+      <div id="loader-progress" class="loader-progress"></div>
+    </div>
+    <div class="loader-specs mono">
+      <span>CLASS: HERRSCHER</span>
+      <span>POWER: LIGHTNING</span>
+      <span>STATUS: LEGENDARY</span>
+    </div>
+  </div>
+  <div class="loader-bottom mono">
+    <span>HONKAI IMPACT 3RD / HONKAI: STAR RAIL</span>
+    <span id="loader-percent">0%</span>
+  </div>
+  <div class="loader-glitch"></div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="noise"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav class="top-nav mono">
+  <div class="nav-left">
+    <span class="nav-logo">RAIDEN // 01</span>
+    <span class="nav-sub">A DIGITAL CHARACTER SHOWCASE</span>
+  </div>
+  <div class="nav-right">
+    <span class="nav-spec">SPEC.01</span>
+    <span class="nav-line"></span>
+    <span class="nav-menu">雷電芽衣 — HERRSCHER OF THUNDER</span>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section id="hero" class="section hero">
+    <div class="hero-bg">
+      <img src="assets/hero-mei.jpg" alt="Raiden Mei" id="heroImage">
+      <div class="hero-vignette"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-left mono">
+        <div class="hero-label">RAIDEN MEI</div>
+        <div class="hero-label thin">HERRSCHER OF THUNDER</div>
+        <div class="hero-kanji">雷電芽衣</div>
+        <div class="hero-meta">
+          <span>ORIGIN: HONKAI IMPACT 3RD</span>
+          <span>WEAPON: KATANA</span>
+          <span>ELEMENT: LIGHTNING</span>
+        </div>
+      </div>
+      <div class="hero-center">
+        <h1 class="hero-title">
+          <span class="line">THUNDER</span>
+          <span class="line outline">IN MOTION.</span>
+        </h1>
+        <div class="hero-tagline mono">
+          SHE DOESN'T CHASE THE STORM.<br>SHE IS THE STORM.
+        </div>
+      </div>
+      <div class="hero-right mono">
+        <div class="hero-index">
+          <span>01</span>
+          <span class="v-line"></span>
+          <span>RAIDEN MEI</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom mono">
+      <div class="hero-bottom-left">
+        <span>HONKAI IMPACT 3RD</span>
+        <span class="slash">/</span>
+        <span>HONKAI: STAR RAIL</span>
+      </div>
+      <div class="hero-bottom-center">
+        <button id="enterBtn" class="enter-btn">
+          <span>ENTER EXPERIENCE</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+      <div class="hero-bottom-right">
+        <span>SCROLL TO DRIVE</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-lightning"></div>
+  </section>
+
+  <!-- SPEC -->
+  <section id="specs" class="section specs">
+    <div class="section-num mono">02 / SPECIFICATIONS</div>
+    <div class="specs-grid">
+      <div class="specs-left">
+        <h2 class="section-title">
+          <span>BUILT FOR</span>
+          <span class="accent">THUNDER.</span>
+        </h2>
+        <p class="specs-desc">
+          Не персонаж. Платформа. Чистая форма, отточенная молнией. 
+          Каждый изгиб — аэродинамика. Каждое движение — разряд.
+          Как легендарный спорткар, который не едет — он атакует асфальт.
+        </p>
+        <div class="specs-table mono">
+          <div class="spec-row">
+            <span class="spec-key">CLASS</span>
+            <span class="spec-val">HERRSCHER</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">POWER</span>
+            <span class="spec-val">LIGHTNING / ORIGIN</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">ORIGIN</span>
+            <span class="spec-val">HONKAI IMPACT 3RD</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">WEAPON</span>
+            <span class="spec-val">KATANA — PRECISION BLADE</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">ELEMENT</span>
+            <span class="spec-val">LIGHTNING</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">STATUS</span>
+            <span class="spec-val accent">LEGENDARY</span>
+          </div>
+        </div>
+      </div>
+      <div class="specs-right">
+        <div class="perf-card">
+          <div class="perf-header mono">
+            <span>PERFORMANCE DATA</span>
+            <span>RAIDEN MEI SPEC.01</span>
+          </div>
+          <div class="perf-bars">
+            <div class="perf-bar" data-value="5">
+              <div class="perf-label"><span>POWER</span><span>★★★★★</span></div>
+              <div class="perf-track"><div class="perf-fill" style="width:100%"></div></div>
+            </div>
+            <div class="perf-bar" data-value="5">
+              <div class="perf-label"><span>SPEED</span><span>★★★★★</span></div>
+              <div class="perf-track"><div class="perf-fill" style="width:100%"></div></div>
+            </div>
+            <div class="perf-bar" data-value="5">
+              <div class="perf-label"><span>PRECISION</span><span>★★★★★</span></div>
+              <div class="perf-track"><div class="perf-fill" style="width:100%"></div></div>
+            </div>
+            <div class="perf-bar" data-value="4">
+              <div class="perf-label"><span>CONTROL</span><span>★★★★☆</span></div>
+              <div class="perf-track"><div class="perf-fill" style="width:80%"></div></div>
+            </div>
+            <div class="perf-bar" data-value="5">
+              <div class="perf-label"><span>DANGER</span><span>★★★★★</span></div>
+              <div class="perf-track"><div class="perf-fill danger" style="width:100%"></div></div>
+            </div>
+          </div>
+          <div class="perf-footer mono">
+            <div class="perf-stat">
+              <span>0-100 KM/H</span>
+              <span class="big">0.0s</span>
+              <span>INSTANT LIGHTNING</span>
+            </div>
+            <div class="perf-stat">
+              <span>TOP SPEED</span>
+              <span class="big">∞</span>
+              <span>THUNDER DOESN'T LIMIT</span>
+            </div>
+          </div>
+        </div>
+        <div class="specs-image">
+          <img src="assets/mei-detail.jpg" alt="detail">
+          <div class="specs-image-label mono">DETAIL — 001 / KATANA LIGHTNING CORE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN -->
+  <section id="design" class="section design">
+    <div class="section-num mono">03 / DESIGN LANGUAGE</div>
+    <div class="design-header">
+      <h2 class="section-title large">
+        <span>ELEGANCE</span>
+        <span class="slash">/</span>
+        <span>PRECISION</span>
+        <span class="slash">/</span>
+        <span class="accent">POWER</span>
+      </h2>
+    </div>
+    <div class="design-grid">
+      <div class="design-visual">
+        <div class="design-img-wrap">
+          <img src="assets/hero-mei.jpg" alt="Mei design" class="design-img">
+          <div class="callout" style="top:12%; left:20%;">
+            <div class="callout-line"></div>
+            <div class="callout-content mono">
+              <span class="callout-num">① HAIR</span>
+              <span class="callout-desc">SIGNATURE SILHOUETTE<br>ICONIC FLOW — AERODYNAMIC</span>
+            </div>
+          </div>
+          <div class="callout right" style="top:42%; right:10%;">
+            <div class="callout-line"></div>
+            <div class="callout-content mono">
+              <span class="callout-num">② KATANA</span>
+              <span class="callout-desc">PRECISION WEAPON<br>EXTENSION OF WILL</span>
+            </div>
+          </div>
+          <div class="callout" style="top:68%; left:15%;">
+            <div class="callout-line"></div>
+            <div class="callout-content mono">
+              <span class="callout-num">③ ARMOR</span>
+              <span class="callout-desc">DEFENSIVE / OFFENSIVE<br>BLACK PURPLE COMPOSITE</span>
+            </div>
+          </div>
+          <div class="callout right" style="top:78%; right:18%;">
+            <div class="callout-line"></div>
+            <div class="callout-content mono">
+              <span class="callout-num">④ LIGHTNING</span>
+              <span class="callout-desc">CORE VISUAL IDENTITY<br>ELECTRIC PURPLE CORE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="design-info mono">
+        <div class="design-block">
+          <span class="d-key">SILHOUETTE</span>
+          <span class="d-val">Чистая узнаваемая форма. Длинные волосы — как спойлер, разрезающий воздух. Минимализм, доведенный до оружия.</span>
+        </div>
+        <div class="design-block">
+          <span class="d-key">KATANA</span>
+          <span class="d-val">Не просто меч. Интерфейс. Проводник молнии. Каждый взмах — зажигание.</span>
+        </div>
+        <div class="design-block">
+          <span class="d-key">LIGHTNING</span>
+          <span class="d-val">Визуальный язык — разряд. Не эффект, а сущность. Фиолетовый — не цвет, а напряжение.</span>
+        </div>
+        <div class="design-block">
+          <span class="d-key">COLOR</span>
+          <div class="color-dots">
+            <span class="dot" style="background:#050507; border:1px solid #222"> #050507</span>
+            <span class="dot" style="background:#F5F5F5; color:#000"> #F5F5F5</span>
+            <span class="dot" style="background:#8B5CF6"> #8B5CF6</span>
+            <span class="dot" style="background:#A855F7"> #A855F7</span>
+          </div>
+        </div>
+        <div class="design-quote">
+          <span>“BUILT LIKE A JAPANESE PERFORMANCE MACHINE.<br>FEELS LIKE A FORCE OF NATURE.”</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVOLUTION -->
+  <section id="evolution" class="section evolution">
+    <div class="section-num mono">04 / EVOLUTION — GENERATION HISTORY</div>
+    <h2 class="section-title">EVOLUTION</h2>
+    <div class="evo-desc mono">LIKE A LEGENDARY MODEL LINE — EACH GENERATION REFINES THE THUNDER</div>
+    <div class="evo-track-wrap">
+      <div class="evo-track" id="evoTrack">
+        <div class="evo-card" data-year="2017">
+          <div class="evo-year mono">GEN 01 — 2017</div>
+          <div class="evo-img"><img src="assets/evo-base.jpg" alt=""></div>
+          <div class="evo-info">
+            <h3>RAIDEN MEI</h3>
+            <p>ORIGIN MODEL. Чистая, невинная, но уже с молнией внутри. Начало легенды.</p>
+            <div class="evo-specs mono">
+              <span>CLASS: VALKYRIE</span>
+              <span>POWER: BASELINE</span>
+            </div>
+          </div>
+        </div>
+        <div class="evo-card featured" data-year="2019">
+          <div class="evo-year mono">GEN 02 — 2019</div>
+          <div class="evo-img"><img src="assets/evo-thunder.jpg" alt=""></div>
+          <div class="evo-info">
+            <h3>HERRSCHER OF THUNDER</h3>
+            <p>TURBOCHARGED. Полное принятие силы. Фиолетовый становится ядерным. Катана режет реальность.</p>
+            <div class="evo-specs mono">
+              <span>CLASS: HERRSCHER</span>
+              <span>POWER: OVERCLOCKED</span>
+            </div>
+          </div>
+        </div>
+        <div class="evo-card" data-year="2023">
+          <div class="evo-year mono">GEN 03 — 2023</div>
+          <div class="evo-img"><img src="assets/evo-origin.jpg" alt=""></div>
+          <div class="evo-info">
+            <h3>HERRSCHER OF ORIGIN</h3>
+            <p>FINAL FORM. Не разрушение, а начало. Белый и фиолетовый. Эволюция завершена, но история нет.</p>
+            <div class="evo-specs mono">
+              <span>CLASS: ORIGIN</span>
+              <span>POWER: INFINITE</span>
+            </div>
+          </div>
+        </div>
+        <div class="evo-card starrail" data-year="2024">
+          <div class="evo-year mono">GEN 04 — 2024 / ANOTHER UNIVERSE</div>
+          <div class="evo-img"><img src="assets/evo-acheron.jpg" alt=""></div>
+          <div class="evo-info">
+            <h3>ACHERON // STAR RAIL</h3>
+            <p>REBADGED LEGEND. Та же душа, другой кузов. Космический гранд-турер с привкусом небытия.</p>
+            <div class="evo-specs mono">
+              <span>CLASS: EMANATOR</span>
+              <span>PATH: NIHILITY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="evo-scroll-hint mono">← DRAG TO EXPLORE GENERATIONS →</div>
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section id="performance" class="section performance">
+    <canvas id="trailCanvas"></canvas>
+    <div class="section-num mono">05 / PERFORMANCE</div>
+    <div class="perf-bg-text">PERFORMANCE</div>
+    <div class="perf-content">
+      <div class="perf-left">
+        <h2 class="section-title massive">PERFORMANCE</h2>
+        <div class="perf-grid mono">
+          <div class="perf-item"><span>LIGHTNING</span><span>ELEMENT</span></div>
+          <div class="perf-item"><span>KATANA</span><span>WEAPON</span></div>
+          <div class="perf-item"><span>MELEE</span><span>COMBAT</span></div>
+          <div class="perf-item"><span>HIGH</span><span>MOBILITY</span></div>
+        </div>
+        <p class="perf-desc">Двигай мышью. Почувствуй, как за ней тянется молния. Это не эффект — это след от скорости, которую нельзя зафиксировать камерой.</p>
+      </div>
+      <div class="perf-right">
+        <div class="perf-visual">
+          <img src="assets/mei-detail.jpg" alt="" class="perf-img">
+          <div class="perf-stats-overlay mono">
+            <div class="stat-line"><span>THROTTLE</span><span>100%</span></div>
+            <div class="stat-line"><span>VOLTAGE</span><span>∞ kV</span></div>
+            <div class="stat-line"><span>STATUS</span><span class="accent">OVERDRIVE</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMBAT -->
+  <section id="combat" class="section combat">
+    <div class="section-num mono">06 / COMBAT DYNAMICS</div>
+    <div class="combat-header">
+      <h2 class="combat-title">
+        WHEN THE BLADE MOVES,<br>
+        <span class="accent">THUNDER FOLLOWS.</span>
+      </h2>
+    </div>
+    <div class="combat-stage">
+      <div class="combat-visual" id="combatVisual">
+        <img src="assets/hero-mei.jpg" alt="" id="combatImg">
+        <div class="combat-overlay"></div>
+        <div class="combat-glitch-text mono" id="combatGlitch">SPEED</div>
+      </div>
+      <div class="combat-controls mono">
+        <div class="combat-label">COMBAT STYLE — SELECT MODE</div>
+        <div class="combat-modes">
+          <button class="combat-mode active" data-mode="speed">
+            <span class="mode-num">01 /</span>
+            <span class="mode-name">SPEED</span>
+            <span class="mode-desc">BLITZ — NO FRAME LOST</span>
+          </button>
+          <button class="combat-mode" data-mode="precision">
+            <span class="mode-num">02 /</span>
+            <span class="mode-name">PRECISION</span>
+            <span class="mode-desc">IAI — ONE CUT, ONE KILL</span>
+          </button>
+          <button class="combat-mode" data-mode="lightning">
+            <span class="mode-num">03 /</span>
+            <span class="mode-name">LIGHTNING</span>
+            <span class="mode-desc">VOLTAGE — FIELD DOMINATION</span>
+          </button>
+          <button class="combat-mode" data-mode="burst">
+            <span class="mode-num">04 /</span>
+            <span class="mode-name">BURST</span>
+            <span class="mode-desc">HERRSCHER — REALITY BREAK</span>
+          </button>
+        </div>
+        <div class="combat-data" id="combatData">
+          <p>Скорость — не характеристика, а состояние. В режиме SPEED Mei перестает быть видимой. Остается только линия разреза.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAR RAIL -->
+  <section id="starrail" class="section starrail">
+    <div class="starfield"></div>
+    <div class="section-num mono">07 / ANOTHER UNIVERSE</div>
+    <div class="starrail-header">
+      <div class="mono">HONKAI: STAR RAIL — ALTERNATE SPEC</div>
+      <h2 class="section-title">ACHERON<br><span class="outline">GALAXY RANGER</span></h2>
+    </div>
+    <div class="starrail-grid">
+      <div class="starrail-visual">
+        <img src="assets/mei-starrail.jpg" alt="Acheron">
+        <div class="starrail-label mono">SPEC.01 — NIHILITY / LIGHTNING / BEYOND</div>
+      </div>
+      <div class="starrail-info">
+        <div class="starrail-quote">
+          <p>“В этой вселенной она не гонится за бурей.<br>Она — забвение, идущее сквозь звезды.”</p>
+        </div>
+        <div class="starrail-specs mono">
+          <div class="sr-row"><span>IDENTITY</span><span>ACHERON</span></div>
+          <div class="sr-row"><span>PATH</span><span>NIHILITY</span></div>
+          <div class="sr-row"><span>COMBAT</span><span>LIGHTNING</span></div>
+          <div class="sr-row"><span>FACTION</span><span>SELF-ANNIHILATOR</span></div>
+          <div class="sr-row"><span>ORIGIN</span><span>IZUMO / BEYOND</span></div>
+        </div>
+        <div class="starrail-text">
+          <p>Тот же силуэт. Та же катана. Но свет — холоднее. Космос вместо грозового неба. 
+          Если Herrscher of Thunder — это спорткар для трека, то Acheron — гранд-турер для путешествий между галактиками, где топливо — воспоминания.</p>
+        </div>
+        <div class="starrail-connection mono">
+          <span>CONNECTION VERIFIED</span>
+          <span>RAIDEN MEI → RAIDEN SHOGUN → ACHERON</span>
+          <span>ONE SOUL, MULTIPLE CHASSIS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MACHINE -->
+  <section id="machine" class="section machine">
+    <div class="machine-content">
+      <div class="machine-line mono">CONCEPT — 09</div>
+      <h2 class="machine-title">
+        <span class="m-line">NOT A MACHINE.</span>
+        <span class="m-line accent">A FORCE OF NATURE.</span>
+      </h2>
+      <div class="machine-words" id="machineWords">
+        <span class="m-word" data-delay="0">SPEED</span>
+        <span class="m-word" data-delay="200">PRECISION</span>
+        <span class="m-word" data-delay="400">POWER</span>
+        <span class="m-word" data-delay="600">CONTROL</span>
+      </div>
+      <div class="machine-final">MEI</div>
+      <div class="machine-sub mono">THUNDER IN MOTION — SPEC.01</div>
+    </div>
+    <div class="machine-lightning"></div>
+  </section>
+
+  <!-- FINAL -->
+  <section id="final" class="section final">
+    <div class="final-line"></div>
+    <div class="final-content">
+      <h2 class="final-title">RAIDEN MEI</h2>
+      <div class="final-sub mono">THE HERRSCHER OF THUNDER</div>
+      <div class="final-meta mono">
+        <span>HONKAI IMPACT 3RD</span>
+        <span class="dot">•</span>
+        <span>HONKAI: STAR RAIL</span>
+      </div>
+      <div class="final-quote">SHE DOESN'T CHASE THE STORM.<br>SHE IS THE STORM.</div>
+      <div class="final-bottom mono">
+        <span>RAIDEN MEI — SPEC.01</span>
+        <span>A DIGITAL CHARACTER SHOWCASE</span>
+        <span>EST. 2017 / FOR THE SOUL</span>
+      </div>
+    </div>
+    <div class="final-grid"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
