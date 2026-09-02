@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 80);
 
   function startHeroAnim() {
-    heroImage.style.transform = 'scale(1)';
+    if (heroImage) heroImage.style.transform = 'scale(1)';
   }
 
   // CURSOR - FASTER FOLLOW
