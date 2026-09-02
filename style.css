@@ -79,8 +79,9 @@ body.hover .cursor-dot{transform:scale(2.5); background:var(--accent); box-shado
 .section-title.massive{font-size:clamp(64px,10vw,180px); line-height:0.85}
 /* HERO */
 .hero{height:100vh; display:flex; align-items:center; background:var(--bg)}
-.hero-bg{position:absolute; inset:0; overflow:hidden}
-.hero-bg img{width:100%; height:100%; object-fit:cover; opacity:0.65; transform:scale(1.05); transition:transform 2s ease-out; animation:windSway 8s ease-in-out infinite; filter:contrast(1.05) saturate(1.1)}
+.hero-bg{position:absolute; inset:0; overflow:hidden; background:#050507}
+.hero-bg img{width:100%; height:100%; object-fit:cover; object-position:center 15%; opacity:0.75; transform:scale(1.05); transition:transform 2s ease-out; animation:windSway 8s ease-in-out infinite; filter:contrast(1.08) saturate(1.15) brightness(0.95)}
+.hero-bg-glow{position:absolute; inset:0; background:radial-gradient(ellipse at 75% 45%, rgba(139,92,246,0.18), transparent 50%), radial-gradient(ellipse at 25% 80%, rgba(139,92,246,0.08), transparent 40%); pointer-events:none; mix-blend-mode:screen}
 @keyframes windSway{0%,100%{transform:scale(1.05) translateX(0) translateY(0)} 25%{transform:scale(1.06) translateX(-8px) translateY(-4px)} 50%{transform:scale(1.05) translateX(6px) translateY(2px)} 75%{transform:scale(1.07) translateX(-4px) translateY(6px)}}
 .hero-vignette{position:absolute; inset:0; background:radial-gradient(ellipse at center, transparent 30%, var(--bg) 85%), linear-gradient(0deg, var(--bg) 0%, transparent 50%, var(--bg) 100%)}
 .hero-grid{position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size:80px 80px; opacity:0.3}
