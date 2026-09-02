@@ -110,10 +110,21 @@ body.hover .cursor-dot{transform:scale(2.5); background:var(--accent); box-shado
 .section-title.massive{font-size:clamp(64px,10vw,180px); line-height:0.85}
 /* HERO */
 .hero{height:100vh; display:flex; align-items:center; background:var(--bg)}
-.hero-bg{position:absolute; inset:0; overflow:hidden; background:#050507}
-.hero-bg img{width:100%; height:100%; object-fit:cover; object-position:center 15%; opacity:0.75; transform:scale(1.05); transition:transform 2s ease-out; animation:windSway 8s ease-in-out infinite; filter:contrast(1.08) saturate(1.15) brightness(0.95)}
-.hero-bg-glow{position:absolute; inset:0; background:radial-gradient(ellipse at 75% 45%, rgba(139,92,246,0.18), transparent 50%), radial-gradient(ellipse at 25% 80%, rgba(139,92,246,0.08), transparent 40%); pointer-events:none; mix-blend-mode:screen}
-@keyframes windSway{0%,100%{transform:scale(1.05) translateX(0) translateY(0)} 25%{transform:scale(1.06) translateX(-8px) translateY(-4px)} 50%{transform:scale(1.05) translateX(6px) translateY(2px)} 75%{transform:scale(1.07) translateX(-4px) translateY(6px)}}
+.hero-bg{position:absolute; inset:0; overflow:hidden; background:#050507; display:flex; justify-content:flex-end; align-items:flex-end}
+.hero-bg img{
+  width:58%; 
+  height:100%; 
+  object-fit:contain; 
+  object-position:right bottom; 
+  opacity:0.85; 
+  transform:none; 
+  transition:transform 2s ease-out; 
+  animation:windSway 8s ease-in-out infinite; 
+  filter:contrast(1.08) saturate(1.15) brightness(0.95);
+  margin-right:4%;
+}
+.hero-bg-glow{position:absolute; inset:0; background:radial-gradient(ellipse at 75% 45%, rgba(139,92,246,0.22), transparent 55%), radial-gradient(ellipse at 25% 80%, rgba(139,92,246,0.1), transparent 45%), linear-gradient(90deg, var(--bg) 0%, transparent 40%, transparent 100%); pointer-events:none; mix-blend-mode:normal}
+@keyframes windSway{0%,100%{transform:translateX(0) translateY(0) scale(1)} 25%{transform:translateX(-6px) translateY(-3px) scale(1.02)} 50%{transform:translateX(4px) translateY(2px) scale(1)} 75%{transform:translateX(-3px) translateY(4px) scale(1.01)}}
 .hero-vignette{position:absolute; inset:0; background:radial-gradient(ellipse at center, transparent 30%, var(--bg) 85%), linear-gradient(0deg, var(--bg) 0%, transparent 50%, var(--bg) 100%)}
 .hero-grid{position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size:80px 80px; opacity:0.3}
 .hero-content{position:relative; width:100%; height:100%; display:grid; grid-template-columns:280px 1fr 120px; padding:64px 32px 0 32px; align-items:center; z-index:2; box-sizing:border-box}
@@ -320,17 +331,19 @@ body.hover .cursor-dot{transform:scale(2.5); background:var(--accent); box-shado
   .hero-content{grid-template-columns:1fr; padding-top:100px}
   .hero-left,.hero-right{display:none}
   .specs-grid,.design-grid,.perf-content,.combat-stage,.starrail-grid{grid-template-columns:1fr}
-  .top-nav{padding:16px}
-  .nav-sub,.nav-menu{display:none}
+  .top-nav{padding:0 16px; height:52px}
+  .nav-sub,.nav-menu,.nav-profile-mini{display:none}
   .evo-card{min-width:320px; max-width:320px}
+  .hero-bg img{width:90%; margin-right:0; opacity:0.6; object-position:center bottom}
 }
 @media(max-width:640px){
   .section{padding-left:20px; padding-right:20px}
-  .section-num{left:20px}
+  .section-num{left:20px; top:72px}
   .hero-title{font-size:18vw}
   .specs,.design,.evolution,.performance,.combat,.starrail{padding:80px 20px}
   .machine-words{gap:12px}
   .final-bottom{flex-direction:column; gap:8px}
   body{cursor:auto}
   .cursor-dot,.cursor-ring{display:none}
+  .hero-bg img{width:100%; height:85%; opacity:0.5}
 }
