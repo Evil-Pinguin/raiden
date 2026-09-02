@@ -38,24 +38,30 @@ document.addEventListener('DOMContentLoaded', () => {
     heroImage.style.transform = 'scale(1)';
   }
 
-  // CURSOR
+  // CURSOR - FASTER FOLLOW
   let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+  let dotX = 0, dotY = 0;
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursorDot.style.left = mouseX - 2 + 'px';
-    cursorDot.style.top = mouseY - 2 + 'px';
   });
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    cursorRing.style.left = ringX - 16 + 'px';
-    cursorRing.style.top = ringY - 16 + 'px';
-    requestAnimationFrame(animateRing);
+  function animateCursor() {
+    // dot follows almost instantly (0.5)
+    dotX += (mouseX - dotX) * 0.5;
+    dotY += (mouseY - dotY) * 0.5;
+    // ring follows fast (0.35) instead of slow 0.12
+    ringX += (mouseX - ringX) * 0.35;
+    ringY += (mouseY - ringY) * 0.35;
+    
+    cursorDot.style.left = dotX - 2.5 + 'px';
+    cursorDot.style.top = dotY - 2.5 + 'px';
+    cursorRing.style.left = ringX - 18 + 'px';
+    cursorRing.style.top = ringY - 18 + 'px';
+    requestAnimationFrame(animateCursor);
   }
-  animateRing();
+  animateCursor();
 
-  document.querySelectorAll('button, a, .evo-card, .combat-mode').forEach(el => {
+  document.querySelectorAll('button, a, .evo-card, .combat-mode, .design-block, .callout-content, .nav-profile, .spec-row, .dot').forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('hover'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('hover'));
   });
